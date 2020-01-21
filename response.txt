@@ -1,0 +1,38 @@
+This example concerns the effect of patient genotype and their glutathione concentration on their sensitivity to cytoxic drugs. Patients vary in their response to cancer treatment. This may be because sensitivity to cytotoxic (anti-cancer) drugs is influenced by genotype. However, glutathione (GSH) concentration is also implicated in treatment sensitivity. Researchers measure treatment sensitivity and GSH concentration for patients that had one of three alleles (“A2”,“AA01”,“B34”). The data are in response.txt and comprise the following variables:
+
+GSH: a continuous measure glutathione concentration
+sens: a continuous measure of treatment sensitivity in arbitrary units
+genotype: a factor with three levels,A2, AA01 and B34
+
+"GSH" "sens" "genotype"
+3.9 26.9 "A2"
+3.19 24.58 "A2"
+4.46 30.22 "A2"
+3.07 27.84 "A2"
+5 30.3 "A2"
+3.31 28.42 "A2"
+5.55 31.8 "A2"
+4.12 29.24 "A2"
+5.24 28.08 "A2"
+5.91 28.82 "B34"
+3.99 24.08 "B34"
+4.2 28.6 "B34"
+3.32 23.54 "B34"
+3.84 27.48 "B34"
+3.78 27.96 "B34"
+4.29 25.28 "B34"
+3.78 23.56 "B34"
+5.4 30.2 "B34"
+3.09 25.58 "B34"
+3.95 28.5 "B34"
+4.7 26.6 "B34"
+3.24 23.98 "B34"
+4.43 27.16 "B34"
+3.28 26.56 "B34"
+2.26 24.82 "AA01"
+4.03 28.26 "AA01"
+4.04 31.58 "AA01"
+4.01 30.32 "AA01"
+3.83 30.26 "AA01"
+4.06 29.22 "AA01"
+3.22 24.54 "AA01"
