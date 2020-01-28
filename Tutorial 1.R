@@ -1,6 +1,25 @@
-library(ggplot2)
+library(tidyverse)
 #data input
 response <- read.table("response.txt", skip = 6, header = TRUE)
+
+# sumarrising
+response %>% 
+  group_by(genotype) %>% 
+  summarise(m = mean(sens),
+            sd = sd(sens),
+            n = length(sens),
+            se = sd/sqrt(n),
+            median = median(sens))
+
+# filter our rows
+responseA2 <- response %>% 
+  filter(genotype == "A2")
+
+# select columns
+response %>% 
+  select(sens, genotype)
+
+
 str(response)
 ggplot(data = response,
        aes(x = GSH, y = sens, col = genotype)) +
