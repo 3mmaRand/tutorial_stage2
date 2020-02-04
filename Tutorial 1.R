@@ -2,7 +2,7 @@ library(tidyverse)
 #data input
 response <- read.table("response.txt", skip = 6, header = TRUE)
 
-# sumarrising
+# summarising
 response %>% 
   group_by(genotype) %>% 
   summarise(m = mean(sens),
@@ -30,9 +30,11 @@ ggplot(data = response,
 
 mod <- lm(data = response, sens ~ GSH * genotype)
 summary(mod)
+anova(mod)
 
 anova(mod)
 
 mod_2  <- update(mod, .~. -GSH:genotype)
 
 summary(mod_2)
+anova(mod_2)
